@@ -15,8 +15,8 @@ class checktoken
      */
     public function handle($request, Closure $next)
     {
-        $response = $next($request);
-        $response->header('Token_api', 'alo123');
-        return $response;
+        if ($request->header('token')) {
+            return $next($request);
+        }
     }
 }

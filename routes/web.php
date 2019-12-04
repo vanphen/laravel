@@ -14,4 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('login', 'HelloController@login')->middleware('hellomidleware');
+Route::get('user', 'ChecktokenController@api')->middleware('checktoken');
