@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 class HelloController extends Controller
 {
-    public  function  hello() {
-        echo 'xin chao cac ban';
-    }
+    public  function  login() {
+        var_dump($_GET);
+        if (!empty($_GET)) {
+            return view('admin');
+        } else {
+            return view('login');
+        }
+}
     //
 }

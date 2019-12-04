@@ -15,11 +15,6 @@ class Check_token
      */
     public function handle($request, Closure $next)
     {
-        if ($request->path() !== 'hello') {
-            if (!$request->token) {
-                return redirect('hello');
-            }
-        }
         return $next($request);
     }
 }
