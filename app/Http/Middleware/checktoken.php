@@ -17,6 +17,8 @@ class checktoken
     {
         if ($request->header('token')) {
             return $next($request);
+        } else {
+            echo 'chua co token';
         }
     }
 }

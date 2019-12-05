@@ -14,4 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('user', 'ChecktokenController@api')->middleware('checktoken');
+Route::get('token', 'TokenController@token')->middleware('checktoken');
