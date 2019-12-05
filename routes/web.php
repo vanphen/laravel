@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('user/update/{id}',function ($id) {
+   return view('profile', ['id' => $id]);
+})->name('profile');
