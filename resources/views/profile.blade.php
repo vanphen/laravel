@@ -1,16 +1,12 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
-        <form action="/user/update/{{$id}}" method="post">
+        <form action="year" method="post">
             @csrf
-            <input type="text" id="login" class="fadeIn second" name="email" placeholder="please enter the email">
-            @error('email')
+            <input type="text" id="login" class="fadeIn second" name="number" placeholder="xin vui long nhap năm">
+            @error('number')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-            <input type="text" id="password" class="fadeIn third" name="password" placeholder="please enter the password">
-            @error('password')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-            <input type="submit" class="fadeIn fourth" value="update">
+            <input type="submit" class="fadeIn fourth" value="kiem tra">
         </form>
     </div>
 </div>

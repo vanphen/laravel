@@ -14,6 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('user/update/{id}',function ($id) {
-   return view('profile', ['id' => $id]);
+Route::get('year',function () {
+   return view('profile');
 })->name('profile');
+Route::post('year', 'PostController@storeWithFormRequest');
+Route::get('success', function (){
+   echo 'la nam nhuan';
+})->name('success');
+
+
+
