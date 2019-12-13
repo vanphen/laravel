@@ -9,10 +9,10 @@ class User extends Model
     protected $fillable = ['id','first_name','last_name'];
     public function phone()
     {
-        return $this->hasMany('App\Phone');
+        return $this->hasOne('App\Phone');
     }
-    public function role()
-    {
-        return $this->belongsToMany('App\Role');
+
+    public function Role(){
+        return $this->belongsToMany('App\Role','user_role','user_id','role_id');
     }
 }
