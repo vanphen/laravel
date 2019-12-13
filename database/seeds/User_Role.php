@@ -11,13 +11,39 @@ class User_Role extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i<25 ;$i++) {
-            DB::table('user_role')->insert([
-                'user_id' =>  rand(0,25),
-                'role_id' =>  rand(0,25),
-                'created_at' => DB::raw('CURRENT_TIMESTAMP'),
-                'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
-            ]);
+        for ($i=1; $i<26 ;$i++) {
+            if (rand(0,1) == 1) {
+                DB::table('user_role')->insert([
+                    'user_id' =>  $i,
+                    'role_id' =>  26,
+                    'created_at' => DB::raw('CURRENT_TIMESTAMP'),
+                    'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
+                ]);
+            }
+            if (rand(0,1) == 1) {
+                DB::table('user_role')->insert([
+                    'user_id' =>  $i,
+                    'role_id' =>  27,
+                    'created_at' => DB::raw('CURRENT_TIMESTAMP'),
+                    'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
+                ]);
+            }
+            if (rand(0,1) == 1) {
+                DB::table('user_role')->insert([
+                    'user_id' =>  $i,
+                    'role_id' =>  28,
+                    'created_at' => DB::raw('CURRENT_TIMESTAMP'),
+                    'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
+                ]);
+            }
+            if (rand(0,1) == 1) {
+                DB::table('user_role')->insert([
+                    'user_id' =>  $i,
+                    'role_id' =>  29,
+                    'created_at' => DB::raw('CURRENT_TIMESTAMP'),
+                    'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
+                ]);
+            }
         }
     }
 }

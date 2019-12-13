@@ -47,10 +47,14 @@
                     {{ $user-> last_name }}
                 </td>
                 <td>
-                    {{ $user->number }}
+                    @foreach($user->phones as $phone)
+                        {{ $phone->number }}<br>
+                    @endforeach
                 </td>
                 <td>
-                    {{ $user->name }}
+                    @foreach($user->roles as $role)
+                        {{ $role->name }}<br>
+                    @endforeach
                 </td>
             </tr>
         @endforeach
