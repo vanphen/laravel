@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Http\Requests\postRequest;
 
 class PostController extends Controller
 {
@@ -15,7 +16,7 @@ class PostController extends Controller
         return view('posts.detail');
     }
 
-    public function create() {
+    public function create(Request $request ) {
         return view('posts.create');
     }
 }

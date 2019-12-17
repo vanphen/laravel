@@ -9,6 +9,9 @@
                     <label>Tiêu đề </label>
                     <input type="text" name="first-name" placeholder="First Name">
                 </div>
+                @error('title')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
                 <div class="field">
                     <label>Last Name</label>
                     <textarea name=text id="text" cols="30" rows="10"></textarea>
@@ -21,6 +24,10 @@
                     </script>
                     @include('ckfinder::setup')
                 </div>
+
+                @error('content')
+                <div class="alert alert-danger">{{ $message1 }}</div>
+                @enderror
                 <button class="ui button" type="submit">Submit</button>
             </form>
         </div>
