@@ -12,10 +12,10 @@ class PostController extends Controller
     }
 
     public function detail($postid) {
-        echo 'van thao';
+        return view('posts.detail');
     }
 
     public function create() {
-
+        return view('posts.create');
     }
 }

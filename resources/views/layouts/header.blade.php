@@ -11,6 +11,11 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
     <script src=" {{ asset('style/semantic.min.js') }}"></script>
+
+    <link data-turbolinks-track="true" href="{{ asset('style/application-5760f1ecfa283a3d994b4a09b37eaf19.css') }}" media="all" rel="stylesheet" />
+    <link href="{{ asset('style/board-e5fa761c4c673840e96bb356898a17f8.css') }}" media="screen" rel="stylesheet" />
+
+    <script data-turbolinks-track="true" src="{{ asset('style/application-8df18607b20c6c3a4e3aa08ad3dc39ee.js') }}"></script>
     <title>User</title>
 </head>
 <body>

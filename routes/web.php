@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/list', 'PostController@list')->name('list');
 
-Route::get('/detail/{postid}','PostController@detail')->name('detail');
+Route::get('/detail/{postid}', 'PostController@detail')->name('detail');
 
-Route::get('/create','PostController@create')->name('create');
+Route::get('/create', 'PostController@create')->name('create');
+
+Route::get('/login', function () {
+   return view('admin.login');
+});
