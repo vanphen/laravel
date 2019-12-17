@@ -1,19 +1,20 @@
 @extends('view')
 @section('main')
     <div class="ui centered grid">
-        <h1>Tạo POST</h1>
+        <h1>Tạo Tin Mới</h1>
         <div class="six wide tablet eight wide computer column">
-            @csrf
+
             <form class="ui form" action="create" method="post" >
+                @csrf
                 <div class="field">
                     <label>Tiêu đề </label>
-                    <input type="text" name="title" placeholder="First Name">
+                    <input type="text" name="title" placeholder="Tiêu đề">
                 </div>
                 @error('title')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div style="color: red;" class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="field">
-                    <label>Last Name</label>
+                    <label>Nội dung</label>
                     <textarea name="content" id="text" cols="30" rows="10"></textarea>
                     <script src={{ url('ckeditor/ckeditor.js') }}></script>
                     <script>
@@ -24,14 +25,13 @@
                     </script>
                     @include('ckfinder::setup')
                 </div>
-
                 @error('content')
-                <div class="alert alert-danger">{{ $message1 }}</div>
+                <div style="color: red;" class="alert alert-danger">{{ $message }}</div>
                 @enderror
+                <br>
                 <button class="ui button" type="submit">Submit</button>
             </form>
         </div>
     </div>
-
 @endsection
 @include('ckfinder::setup')

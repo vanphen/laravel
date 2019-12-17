@@ -17,5 +17,44 @@
 
     <script data-turbolinks-track="true" src="{{ asset('style/application-8df18607b20c6c3a4e3aa08ad3dc39ee.js') }}"></script>
     <title>User</title>
+    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 </head>
 <body>
+<header class="master-header ng-scope">
+    <div class="ui centered grid transparent inverted main menu page ">
+            <!-- Left -->
+            <!-- Logo -->
+            <div class="six wide tablet eight wide computer column">
+                <p class="logo item">
+                    <a href="{{route('home')}}">
+                        <img style="width: 18%; height: 50%;" class="ui image" src="https://kipalog.com/assets/common/icon/logo-089ee7649acd5dd69ceb7c9dddece3bf.png">
+                    </a>
+                </p>
+            </div>
+            <div class="six wide tablet eight wide computer column">
+                <div class="right menu">
+                    <!-- Home -->
+                    <a class="item home scale-item" href="{{route('home')}}">
+                        <i class="small home icon"></i>
+                        <strong>Trang chủ</strong>
+                    </a>
+
+                    <!-- New post -->
+                    <div class="ui simple dropdown item newpost">
+                        <a class="main" href="{{route('create')}}">
+                            <i class="small edit icon"></i>
+                            <strong>Viết bài</strong>
+                        </a>
+                    </div>
+
+                    <!-- Profile -->
+                    <a class="item store scale-item" href="{{route('login')}}">
+                        <i class="small bookmark icon"></i>
+                        <strong>Login</strong>
+                    </a>
+                </div>
+            </div>
+            <!-- Logged in header -->
+
+        </div>
+</header>

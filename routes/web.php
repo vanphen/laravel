@@ -17,14 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/list', 'PostController@list')->name('list');
+Route::get('/home', 'PostController@list')->name('home');
 
 Route::get('/detail/{postid}', 'PostController@detail')->name('detail');
 
-Route::get('/create', 'PostController@create');
+Route::get('/create', 'PostController@create')->name('create');
 
 Route::post('/create', 'PostController@storeWithFormRequest');
 
 Route::get('/login', function () {
    return view('admin.login');
-});
+})->name('login');

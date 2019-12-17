@@ -1,4 +1,5 @@
 @extends('view')
+
 @section('main')
     <main class="master-body" scrollable-to-top="" data-target=".scroll-top">
         <div class="ui page grid">
