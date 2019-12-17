@@ -14,10 +14,6 @@ class PostController extends Controller
         echo 'van thao';
     }
 
-    public function posts() {
-        echo 'posts';
-    }
-
     public function create() {
 
     }
