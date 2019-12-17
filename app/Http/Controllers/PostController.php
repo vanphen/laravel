@@ -21,6 +21,6 @@ class PostController extends Controller
     }
 
     public function storeWithFormRequest(postRequest $request) {
-        return redirect()->route('list')->with('status', 'profile update');
+        $validated = $request->validated();
     }
 }

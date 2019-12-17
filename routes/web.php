@@ -23,7 +23,7 @@ Route::get('/detail/{postid}', 'PostController@detail')->name('detail');
 
 Route::get('/create', 'PostController@create');
 
-Route::post('/create', 'PostController@storeWithFormRequest')->name('create');
+Route::post('/create', 'PostController@storeWithFormRequest');
 
 Route::get('/login', function () {
    return view('admin.login');

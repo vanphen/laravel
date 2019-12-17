@@ -4,7 +4,7 @@
         <h1>Tạo POST</h1>
         <div class="six wide tablet eight wide computer column">
             @csrf
-            <form class="ui form" action="" method="post" >
+            <form class="ui form" action="create" method="post" >
                 <div class="field">
                     <label>Tiêu đề </label>
                     <input type="text" name="title" placeholder="First Name">
