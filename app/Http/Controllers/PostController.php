@@ -19,4 +19,8 @@ class PostController extends Controller
     public function create(Request $request ) {
         return view('posts.create');
     }
+
+    public function storeWithFormRequest(postRequest $request) {
+        return redirect()->route('list')->with('status', 'profile update');
+    }
 }

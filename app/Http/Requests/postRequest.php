@@ -13,7 +13,7 @@ class postRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -31,7 +31,10 @@ class postRequest extends FormRequest
 
     public function messages()
     {
-        return ['titile.required' => 'ban chua nhap title'];
+        return [
+            'title.required' => 'Bạn chưa nhập tiêu đề',
+            'content.required'  => 'Bạn chưa nhập nội dung',
+        ];
     }
 
 }
