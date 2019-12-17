@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'PostController@list')->name('list');
+Route::get('/list', 'PostController@list')->name('list');
 
 Route::get('/detail/{postid}','PostController@detail')->name('detail');
 
