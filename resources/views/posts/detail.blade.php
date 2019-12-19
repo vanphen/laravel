@@ -1,8 +1,8 @@
 @extends('view')
 @section('main')
     <div class="ui centered grid">
-        <div class="six wide tablet eight wide computer column">
-            <div class="ui threaded comments">
+        <div class="eight wide tablet eight wide computer column">
+            <div class="comments">
                 <h1 class="ui teal block fluid header">
                     <strong>{{ $detail[0]->title }}</strong>
                 </h1>
@@ -22,8 +22,9 @@
                 <br>
                 <br>
                 <!-- dentail -->
-                {!! $detail[0]->content !!}
-
+                <section id="content" class="ui pilled segment md" ng-non-bindable="">
+                    {!! $detail[0]->content !!}
+                </section>
                 <h3 class="ui dividing header">Comments</h3>
                 @foreach($comments as $comment)
                     <div class="comment">
