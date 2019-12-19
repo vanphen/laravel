@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use App\Http\Requests\postRequest;
+<<<<<<< HEAD
 use App\Http\Requests\PostComment;
+=======
+>>>>>>> e0e9088724e303f45cf3faa6daf0fab418e4e40a
 Use Alert;
 class PostController extends Controller
 {
@@ -31,6 +34,7 @@ class PostController extends Controller
         return view('posts.create');
     }
 
+<<<<<<< HEAD
     public function insert(postRequest $request) {
         $id = DB::table('posts')->insertGetId(
             [ 'title' => $request->input('title'),
@@ -83,6 +87,18 @@ class PostController extends Controller
         );
         alert()->success('Comment', 'Successfully');
         return redirect('/posts/detail/'.$id);
+=======
+    public function storeWithFormRequest(postRequest $request) {
+        $post = DB::table('posts')->insert(
+            [ 'title' => $request->input('title'),
+                'content' => $request->input('content'),
+            ]
+        );
+        if ($post) {
+            alert()->success('Post Created', 'Successfully');
+            return redirect('list');
+        }
+>>>>>>> e0e9088724e303f45cf3faa6daf0fab418e4e40a
     }
 }
 

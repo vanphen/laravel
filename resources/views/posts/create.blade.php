@@ -4,7 +4,11 @@
         <h1>Tạo Tin Mới</h1>
         <div class="six wide tablet eight wide computer column">
 
+<<<<<<< HEAD
             <form class="ui form" action="/posts/create" method="post" >
+=======
+            <form class="ui form" action="create" method="post" >
+>>>>>>> e0e9088724e303f45cf3faa6daf0fab418e4e40a
                 @csrf
                 <div class="field">
                     <label>Tiêu đề </label>

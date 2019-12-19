@@ -46,6 +46,7 @@
                             <strong>Viết bài</strong>
                         </a>
                     </div>
+<<<<<<< HEAD
                     @if(!empty(Session::has('session')))
                         <div class="ui simple dropdown item newpost">
                             <strong>Xin chào {{ Session::get('session') }}</strong>
@@ -70,5 +71,17 @@
                 </div>
             </div>
             <!-- Logged in header -->
+=======
+
+                    <!-- Profile -->
+                    <a class="item store scale-item" href="{{route('login')}}">
+                        <i class="small bookmark icon"></i>
+                        <strong>Login</strong>
+                    </a>
+                </div>
+            </div>
+            <!-- Logged in header -->
+
+>>>>>>> e0e9088724e303f45cf3faa6daf0fab418e4e40a
         </div>
 </header>

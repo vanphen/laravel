@@ -22,6 +22,7 @@ Route::get('/home', 'PostController@list')->name('home');
 
 Route::get('posts/detail/{postid}', 'PostController@detail')->name('detail');;
 
+<<<<<<< HEAD
 Route::get('posts/create', 'PostController@create')->name('create')->middleware('check');
 
 Route::post('posts/create', 'PostController@insert')->middleware('check');
@@ -39,3 +40,12 @@ Route::get('posts/login', 'Logincontroller@login')->name('login');
 Route::post('posts/login', 'Logincontroller@loginPost');
 
 Route::get('posts/logout', 'Logincontroller@logOut')->name('logout');
+=======
+Route::get('/create', 'PostController@create')->name('create');
+
+Route::post('/create', 'PostController@storeWithFormRequest');
+
+Route::get('/login', function () {
+   return view('admin.login');
+})->name('login');
+>>>>>>> e0e9088724e303f45cf3faa6daf0fab418e4e40a
