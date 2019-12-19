@@ -4,18 +4,18 @@
         <h1>Tạo Tin Mới</h1>
         <div class="six wide tablet eight wide computer column">
 
-            <form class="ui form" action="/posts/create" method="post" >
+            <form class="ui form" action="/posts/edit/{{ $detail[0]->id }}" method="post" >
                 @csrf
                 <div class="field">
                     <label>Tiêu đề </label>
-                    <input type="text" name="title" placeholder="Tiêu đề">
+                    <input type="text" name="title" placeholder="Tiêu đề" value="{{ $detail[0]->title }}">
                 </div>
                 @error('title')
                 <div style="color: red;" class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="field">
                     <label>Nội dung</label>
-                    <textarea name="content" id="text" cols="30" rows="10"></textarea>
+                    <textarea name="content" id="text" cols="30" rows="10">{{ $detail[0]->content }}</textarea>
                     <script src={{ url('ckeditor/ckeditor.js') }}></script>
                     <script>
                         CKEDITOR.replace( 'text', {
@@ -29,7 +29,7 @@
                 <div style="color: red;" class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <br>
-                <button class="ui button" type="submit">Submit</button>
+                <button class="ui button" type="submit">Update</button>
             </form>
         </div>
     </div>

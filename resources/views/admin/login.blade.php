@@ -8,25 +8,31 @@
                     Login Account
                 </div>
             </h2>
-            <form class="ui large form">
+            <form class="ui large form" action="/posts/login" method="post">
+                @csrf
                 <div class="ui stacked segment">
                     <div class="field">
                         <div class="ui left icon input">
                             <i class="user icon"></i>
-                            <input type="text" name="email" placeholder="E-mail address">
+                            <input type="text" name="username" placeholder="Tai Khoản">
                         </div>
+                        <br>
+                        @error('username')
+                        <div style="color: red;" class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="field">
                         <div class="ui left icon input">
                             <i class="lock icon"></i>
-                            <input type="password" name="password" placeholder="Password">
+                            <input type="password" name="password" placeholder="Mật Khẩu">
                         </div>
+                        <br>
+                        @error('password')
+                        <div style="color: red;" class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
-                    <div class="ui fluid large teal submit button">Login</div>
+                    <input type="submit" class="ui fluid large teal button" value="Login">
                 </div>
-
-                <div class="ui error message"></div>
-
             </form>
         </div>
     </div>
